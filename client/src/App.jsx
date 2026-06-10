@@ -10,8 +10,7 @@ const App = () => {
         <Route path="/login" element={<Loginpage></Loginpage>}></Route>
         <Route path="/" element={<DashBoard></DashBoard>}></Route>
       </Routes>
-      
-    </div>
+  </div>
   )
 }
 
