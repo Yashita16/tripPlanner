@@ -4,6 +4,7 @@ import Intro from '../component/Intro'
 import Upcoming from '../component/Upcoming'
 import axios from 'axios'
 import { useEffect, useState } from 'react'
+import QuickOverview from '../component/QuickOverview'
 
 const DashBoard = () => {
   const [trips, setTrips] = useState([]);
@@ -29,7 +30,15 @@ const DashBoard = () => {
     <div>
       <TopBar></TopBar>
       <Intro></Intro>
-      <Upcoming trips={trips} />
+  
+        
+    <Upcoming trips={trips} />
+
+
+
+     
+      
+      
     </div>
   )
 }
