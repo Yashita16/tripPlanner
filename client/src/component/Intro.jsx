@@ -1,6 +1,9 @@
 import React from "react";
 
+import { useNavigate } from "react-router-dom";
+
 const Intro = () => {
+  const navigate = useNavigate();
   return (
     <div className="w-full px-4 md:px-8 py-6 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
       
@@ -16,7 +19,9 @@ const Intro = () => {
       </div>
 
       {/* Right Section */}
-      <button className="px-5 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition cursor-pointer shadow-md">
+      <button className="px-5 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition cursor-pointer shadow-md"
+      onClick={navigate('/create-trip')}
+      >
         + Create New Trip
       </button>
     </div>
