@@ -1,9 +1,13 @@
 import express from 'express'
-import { datastore
- } from '../controller/trips.controller'
+import {datastoretrip} from '../controller/createtrip.controller.js'
+import { protect } from "../middleware/auth.middleware.js";
+
 
 
 const router = express.Router();
 
 
-router.get('/createtrip' , datastore);
+router.post("/createtrip", protect, datastoretrip);
+
+
+export default router;

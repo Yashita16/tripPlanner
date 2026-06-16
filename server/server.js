@@ -4,8 +4,8 @@ import dotenv from 'dotenv';
 import connectDB from './config/db.config.js';
 import authRoutes from './routes/auth.route.js';
 import tripRoutes from './routes/trips.route.js';
-import createtripRoutes from '/routes/createtrip.route.js'
-
+import createtripRoutes from './routes/createtrip.route.js'
+import jointripRoutes from './routes/jointrip.route.js'
 
 
 dotenv.config();
@@ -28,7 +28,8 @@ app.get('/',(req,res)=>{
 
 app.use('/api/auth', authRoutes);
 app.use("/api/trips", tripRoutes);
-app.use('/api/trips' , createtripRoutes);
+app.use('/api/createtrips' , createtripRoutes);
+app.use("/api/jointrips",jointripRoutes)
 
 
 app.listen(process.env.PORT , ()=>{

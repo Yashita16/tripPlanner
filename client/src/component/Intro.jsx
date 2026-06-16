@@ -20,10 +20,11 @@ const Intro = () => {
 
       {/* Right Section */}
       <button className="px-5 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition cursor-pointer shadow-md"
-      onClick={navigate('/create-trip')}
+      onClick={() => navigate('/create-trip')}
       >
         + Create New Trip
       </button>
+      
     </div>
   );
 };

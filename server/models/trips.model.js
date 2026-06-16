@@ -30,6 +30,10 @@ const tripSchema = new mongoose.Schema(
       default: 1,
       min: 1,
     },
+    tripcode:{
+      type: Number,
+      required:true
+    },
     status: {
       type: String,
       enum: ["Planning", "Upcoming", "Ongoing", "Completed"],
