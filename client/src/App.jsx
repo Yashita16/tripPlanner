@@ -4,6 +4,8 @@ import Loginpage from './pages/Loginpage'
 import DashBoard from './pages/DashBoard'
 import CreateTrip from './pages/CreateTrip'
 import Jointrip from './pages/Jointrip'
+import Trips from './pages/Trips'
+import Task from './pages/Task'
 
 const App = () => {
   return (
@@ -13,6 +15,8 @@ const App = () => {
         <Route path="/" element={<DashBoard></DashBoard>}></Route>
         <Route path='/create-trip' element={<CreateTrip></CreateTrip>}></Route>
         <Route path='/join-trip' element={<Jointrip></Jointrip>}  ></Route>
+        <Route path='/trips' element={<Trips></Trips>}></Route>
+        <Route path='/tasks' element={<Task></Task>}></Route>
       </Routes>
   </div>
   )

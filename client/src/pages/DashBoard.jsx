@@ -5,27 +5,11 @@ import Upcoming from '../component/Upcoming'
 import axios from 'axios'
 import { useEffect, useState } from 'react'
 import QuickOverview from '../component/QuickOverview'
+import { useTripContext } from '../context/TripsContext'
 
 const DashBoard = () => {
-  const [trips, setTrips] = useState([]);
-  const [loading, setLoading] = useState(true);
-   useEffect(() => {
-  const fetchTrips = async () => {
-    try {
-      const { data } = await axios.get(
-        "http://localhost:5000/api/trips/upcoming"
-      );
-
-      setTrips(data.trips);
-    } catch (error) {
-      console.log(error);
-    } finally {
-      setLoading(false);
-    }
-  };
-
-  fetchTrips();
-}, []);
+  const {trips, setTrips} = useTripContext()
+  
   return (
     <div>
       <TopBar></TopBar>
